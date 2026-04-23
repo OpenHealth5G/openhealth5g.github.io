@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | OpenHealth5G</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/network.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="/">
+        <img src="/images/logo.svg" alt="OpenHealth5G Logo">
+      </a>
+      <nav class="site-nav">
+        
+          <a href="/">Home</a>
+        
+          <a href="/about/" class="active">About</a>
+        
+          <a href="/use-cases/">Use Cases</a>
+        
+          <a href="/partners/">Partners</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    
+<section class="hero" style="background: var(--color-bg-white);">
+  <div class="hero-inner">
+    <h1 class="hero-title">About</h1>
+    <p class="hero-subtitle">Platform Architecture and Distributed Ecosystem</p>
+  </div>
+</section>
+<section class="section-white" style="padding-top: var(--space-section);">
+  <div class="page-content">
+    <h2 id="executive-summary">Executive Summary</h2>
+<p>The OpenHealth5G project proposes the development and experimentation of innovative digital health and connected care applications, exploring the potential of open 5G and Open RAN network technologies. The prioritized use cases include <strong>emergency telehealth</strong>, enabling remote care in critical situations with support for connected medical devices and sensors, and <strong>immersive medical education</strong>, utilizing augmented and virtual reality resources for training health students and professionals. These applications are developed collaboratively by researchers from partner universities — UFRGS, UFCSPA, UNISINOS, and PUCRS — across the health, computing, and networking disciplines, ensuring both technical performance and usability in real operational contexts.</p>
+<p>To enable these scenarios, the project uses a <strong>distributed experimentation infrastructure</strong> supported by the <a href="https://www.openran.org.br">OpenRAN@Brasil</a> program, involving the consortium universities under technical coordination of PoP-RS. This infrastructure will validate Open RAN technologies, network slicing, Open Gateway, and RAN Intelligent Controllers (RICs), integrated with an open-source 5G core. Intelligent network control and orchestration mechanisms will be developed, along with a cross-cutting Machine Learning Operations (MLOps) layer supporting ML models applied to automation, optimization, and monitoring of applications and services.</p>
+<p>Expected outcomes include scientific and technological advances positioning Brazil at the frontier of fifth-generation open network research for critical applications, direct impacts on workforce development in networks, artificial intelligence, and digital health, and contribution to strengthening the national innovation and experimentation ecosystem for open networks — amplifying social impact through improved quality and access to health services.</p>
+<h2 id="distributed-ecosystem">Distributed Ecosystem</h2>
+<p>The project encompasses the development and integration of a distributed experimentation infrastructure and 5G Open RAN applications, articulating the environments of partner universities in the Porto Alegre metropolitan region — <strong>UFRGS, PUCRS, UNISINOS, and UFCSPA</strong> — in cooperation with PoP-RS, which hosts the network core and main Open RAN architecture components.</p>
+<p><strong>PoP-RS</strong> hosts the 5G core (5GC) of the OpenRAN@Brasil infrastructure, along with the main control components of the Open RAN architecture, including Near-Real-Time and Non-Real-Time RAN Intelligent Controllers (RICs), the Central Unit (CU), and Distributed Units (DUs) serving the partner universities.</p>
+<p><strong>UFRGS</strong> and <strong>UNISINOS</strong> concentrate advanced experimentation environments with outdoor O-RAN Radio Units (RUs), edge computing nodes, and capability to execute local DUs, serving as advanced points of the OpenRAN@Brasil testbed for distributed application execution.</p>
+<p><strong>PUCRS</strong> and <strong>UFCSPA</strong> host the execution environments for connected health applications, interconnected to the testbed via indoor RUs and 5G connectivity. PUCRS utilizes its Simulation and Learning Laboratory for medical education and remote training experiments with immersive (VR/AR) technologies. UFCSPA concentrates telehealth development and emergency telemedicine validation, including sensors, cameras, and portable medical devices.</p>
+<h2 id="platform-architecture">Platform Architecture</h2>
+<p><img src="/images/architecture.png" alt="OpenHealth5G Architecture"></p>
+<h2 id="distributed-ecosystem-1">Distributed Ecosystem</h2>
+<p><img src="/images/distributed-ecosystem.png" alt="Distributed Ecosystem"></p>
+<h2 id="technology-stack">Technology Stack</h2>
+<h3 id="network-technologies">Network Technologies</h3>
+<ul>
+<li><strong>5G Core</strong>: Open5GS, Free5GC with full end-to-end network slicing</li>
+<li><strong>Open RAN</strong>: O-RAN architecture with Near-RT and Non-RT RICs</li>
+<li><strong>Network Slicing</strong>: uRLLC (ultra-reliable low-latency) for telehealth, eMBB (enhanced mobile broadband) for XR</li>
+<li><strong>Open Gateway</strong>: GSMA CAMARA Project APIs via NEF integration for direct 5G core access</li>
+<li><strong>Intelligent Control</strong>: xApps and rApps on RICs for real-time resource optimization</li>
+<li><strong>Analytics</strong>: NWDAF (Network Data Analytics Function) for predictive optimization</li>
+<li><strong>MLOps</strong>: MLflow/KubeFlow infrastructure for ML lifecycle automation</li>
+</ul>
+<h3 id="application-technologies">Application Technologies</h3>
+<ul>
+<li><strong>N3IWF</strong>: Non-3GPP interconnection for medical devices (BLE, Wi-Fi) into 5G core</li>
+<li><strong>Medical Devices</strong>: Portable cardiac ultrasound, pulse oximeter, Polar H10 ECG belt</li>
+<li><strong>Dashboards</strong>: React Native/ReactJS/NodeJS for real-time patient information visualization</li>
+<li><strong>XR Platform</strong>: Meta Glasses API, Unity, WebRTC/LiveKit streaming pipelines</li>
+<li><strong>Security</strong>: STRIDE, LINDDUN, DREAD threat modeling frameworks</li>
+</ul>
+<h3 id="scientific-differentiators">Scientific Differentiators</h3>
+<ol>
+<li><strong>NWDAF predictive analytics</strong> for dynamic resource optimization using near-real-time traffic and application behavior data</li>
+<li><strong>N3IWF cross-network connectivity</strong> for secure interconnection of medical devices on untrusted networks with the 5G infrastructure</li>
+<li><strong>Open Gateway / NEF API integration</strong> exposing network capabilities via standardized open APIs for programmable health applications</li>
+<li><strong>Distributed intelligence</strong> via RICs with adaptive slicing integrating Non-RT and Near-RT controllers with dedicated rApps and xApps</li>
+<li><strong>Multi-institution distributed testbed</strong> connecting UNISINOS, UFRGS, PUCRS, and UFCSPA via Metropoa metropolitan network</li>
+</ol>
+
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>OpenHealth5G: Open 5G Networking for Digital Health</p>
+      <div class="footer-partners">
+        <img src="/images/partner-ufcspa.png" alt="UFCSPA">
+        <img src="/images/partner-pucrs.png" alt="PUCRS">
+        <img src="/images/partner-ufrgs.png" alt="UFRGS">
+        <img src="/images/partner-unisinos.png" alt="Unisinos">
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ block "title" . }}{{ .Title }} | OpenHealth5G{{ end }}</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/network.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="/">
+        <img src="/images/logo.svg" alt="OpenHealth5G Logo">
+      </a>
+      <nav class="site-nav">
+        {{ range site.Menus.main }}
+          <a href="{{ .Page.RelPermalink }}"{{ if eq .Page.Path $.Path }} class="active"{{ end }}>{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>OpenHealth5G: Open 5G Networking for Digital Health</p>
+      <div class="footer-partners">
+        <img src="/images/partner-ufcspa.png" alt="UFCSPA">
+        <img src="/images/partner-pucrs.png" alt="PUCRS">
+        <img src="/images/partner-ufrgs.png" alt="UFRGS">
+        <img src="/images/partner-unisinos.png" alt="Unisinos">
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+baseURL = 'https://openhealth5g.org/'
+languageCode = 'en-us'
+title = 'OpenHealth5G'
+
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+  description = 'Open 5G Networking for Digital Health'
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    pageRef = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 20
+  [[menu.main]]
+    identifier = "use-cases"
+    name = "Use Cases"
+    pageRef = "/use-cases"
+    weight = 30
+  [[menu.main]]
+    identifier = "partners"
+    name = "Partners"
+    pageRef = "/partners"
+    weight = 40
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]

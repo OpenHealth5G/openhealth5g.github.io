@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="1598.5256"
+   height="426.25485"
+   viewBox="0 0 1598.5257 426.25485"
+   sodipodi:docname="Logo OpenHealth5G Dark Background.svg"
+   inkscape:version="1.4.3 (fcd0343856, 2026-01-01)"
+   inkscape:export-filename="Logo OpenHealth5G All Versions.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient73"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#004182;stop-opacity:1;"
+         offset="0"
+         id="stop73" />
+      <stop
+         style="stop-color:#00b8e6;stop-opacity:1;"
+         offset="1"
+         id="stop74" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient73"
+       id="linearGradient84"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,980)"
+       x1="138.26103"
+       y1="-151.92432"
+       x2="309.44388"
+       y2="-346.01843" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#333333"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.40578296"
+     inkscape:cx="714.66776"
+     inkscape:cy="293.26022"
+     inkscape:window-width="1920"
+     inkscape:window-height="1131"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g91"
+     inkscape:export-bgcolor="#ffffff00" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1"
+     transform="translate(-21.043449,-494.75607)">
+    <g
+       id="g91"
+       inkscape:export-filename="Logo OpenHealth5G Dark Background.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:url(#linearGradient84);stroke-width:24;stroke-linecap:round;stroke-dasharray:none"
+         d="m 255.99999,534.66667 c 10.35264,0.44458 20.38785,2.51273 30.66666,4.86833 21.01758,4.81656 38.98785,14.03438 56,26.9969 19.06563,14.52723 35.72025,35.22823 44.72941,57.4681 5.80668,14.33427 7.14888,28.98015 9.93725,44 M 258.66665,581.33334 c 35.11284,2.7712 72.64022,23.81884 86.0957,58.66666 3.34758,8.66974 6.0527,17.49111 7.23763,26.66667 m 36,65.33334 c -26.76241,45.80906 -60.44228,83.21069 -101.33333,117 -12.20129,10.08223 -29.46746,29.41072 -45.33333,31.87447 -6.89451,1.07064 -13.19177,-1.83012 -18.66666,-5.73454 -12.26248,-8.74507 -24.46342,-18.24687 -36,-27.92594 C 141.67884,809.46961 76.987932,754.16608 81.452668,689.33334 c 1.856161,-26.95339 18.541691,-50.92375 43.880662,-61.49795 10.01575,-4.17969 23.14428,-4.67332 33.33333,-3.45473 26.30861,3.14644 44.73055,20.99709 58.66666,38.28601 M 258.66665,628 c 11.87883,3.76687 22.30852,6.37594 31.77263,15.25206 7.37813,6.91974 10.60282,15.67297 13.5607,24.74794"
+         id="path82"
+         sodipodi:nodetypes="csssccsccssccsssccsc"
+         inkscape:export-filename="Logo OpenHealth5G Icon.png"
+         inkscape:export-xdpi="150"
+         inkscape:export-ydpi="150" />
+      <text
+         xml:space="preserve"
+         style="font-size:168px;line-height:0;font-family:Freeman;-inkscape-font-specification:Freeman;writing-mode:lr-tb;direction:ltr;fill:none;stroke:none;stroke-width:18.8976;stroke-linecap:round"
+         x="450.21915"
+         y="789.32013"
+         id="text84"><tspan
+           sodipodi:role="line"
+           id="tspan84"
+           x="450.21915"
+           y="789.32013"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:168px;line-height:0;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#000000;fill-opacity:1;stroke:none"><tspan
+             style="fill:#f4f7f9;fill-opacity:1;stroke:none"
+             id="tspan82">OpenHealth</tspan><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Bold';fill:#00b8e6;fill-opacity:1;stroke:none"
+             id="tspan83">5G</tspan></tspan></text>
+    </g>
+  </g>
+</svg>
