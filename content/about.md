@@ -15,6 +15,8 @@ Expected outcomes include scientific and technological advances positioning Braz
 
 The project encompasses the development and integration of a distributed experimentation infrastructure and 5G Open RAN applications, articulating the environments of partner universities in the Porto Alegre metropolitan region — **UFRGS, PUCRS, UNISINOS, and UFCSPA** — in cooperation with PoP-RS, which hosts the network core and main Open RAN architecture components.
 
+![Distributed Ecosystem](/images/distributed-ecosystem.png)
+
 **PoP-RS** hosts the 5G core (5GC) of the OpenRAN@Brasil infrastructure, along with the main control components of the Open RAN architecture, including Near-Real-Time and Non-Real-Time RAN Intelligent Controllers (RICs), the Central Unit (CU), and Distributed Units (DUs) serving the partner universities.
 
 **UFRGS** and **UNISINOS** concentrate advanced experimentation environments with outdoor O-RAN Radio Units (RUs), edge computing nodes, and capability to execute local DUs, serving as advanced points of the OpenRAN@Brasil testbed for distributed application execution.
@@ -24,10 +26,6 @@ The project encompasses the development and integration of a distributed experim
 ## Platform Architecture
 
 ![OpenHealth5G Architecture](/images/architecture.png)
-
-## Distributed Ecosystem
-
-![Distributed Ecosystem](/images/distributed-ecosystem.png)
 
 ## Technology Stack
 

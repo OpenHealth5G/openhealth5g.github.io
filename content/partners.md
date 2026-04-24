@@ -47,4 +47,6 @@ The telehealth and emergency telemedicine core. Concentrates development and val
 
 PoP-RS hosts the 5G core of the OpenRAN@Brasil infrastructure, along with the main Open RAN architecture control components including Near-Real-Time and Non-Real-Time RAN Intelligent Controllers (RICs), the Central Unit (CU), and Distributed Units (DUs) serving all partner universities.
 
+![PoP-RS](/images/partner-poprs.png)
+
 The metropolitan network **Metropoa** provides dedicated circuits (e.g., 10 Gb) with Resource Reservation Protocol (RSVP) and latency below 1ms between all participating institutions, enabling high-performance experiments across the distributed testbed.

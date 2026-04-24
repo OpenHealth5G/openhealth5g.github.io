@@ -1,8 +1,38 @@
 {{ define "main" }}
+
 {{ partial "hero" . }}
-<section class="claimed-section" style="background: var(--color-bg-soft); padding-bottom: var(--space-section);">
-  <div class="page-content">
-    {{ .Content }}
+
+{{ range $section := (slice (dict "title" "Research Partners" "key" "research") (dict "title" "Infrastructure Host" "key" "infrastructure")) }}
+{{ $sectionPartners := where (where site.Data.partners.partners "section" $section.key) "ne" nil }}
+
+{{ if gt (len $sectionPartners) 0 }}
+<section class="section-white" style="margin-top: 0;">
+  <h2 class="section-title">{{ $section.title }}</h2>
+  <div class="grid-container" style="margin-top: 0;">
+    {{ range $sectionPartners }}
+    <div class="card">
+      <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+        <h3 style="margin: 0; color: var(--color-primary-dark);">{{ .name }}</h3>
+        <span class="tag-pill">{{ .full_name }}</span>
+      </div>
+      <p>{{ .description }}</p>
+      {{ with .image }}
+      <div style="margin-top: 1rem; text-align: center;">
+        <img src="/{{ .image }}" alt="{{ .name }} - {{ .full_name }}" style="max-width: 160px; height: auto; border-radius: 8px;">
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
   </div>
 </section>
+{{ end }}
+{{ end }}
+
+<section class="section-white">
+  <div class="page-content" style="max-width: 860px; margin: 0 auto;">
+    <h2 class="section-title">Network Connectivity</h2>
+    <p>The metropolitan network <strong>Metropoa</strong> provides dedicated circuits (e.g., 10 Gb) with Resource Reservation Protocol (RSVP) and latency below 1ms between all participating institutions, enabling high-performance experiments across the distributed testbed.</p>
+  </div>
+</section>
+
 {{ end }}

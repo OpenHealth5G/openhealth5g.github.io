@@ -1,0 +1,30 @@
+partners:
+  - name: "UFRGS"
+    full_name: "Federal University of Rio Grande do Sul"
+    description: "Advanced experimentation environments with outdoor O-RAN Radio Units, edge computing nodes, and capability to execute local Distributed Units (DUs). Serves as an advanced point of the OpenRAN@Brasil testbed for distributed application execution."
+    image: "images/partner-ufrgs.png"
+    section: research
+
+  - name: "UNISINOS"
+    full_name: "Universidade Vale do Rio dos Sinos"
+    description: "Advanced experimentation environments with outdoor O-RAN Radio Units, edge computing nodes, and local DU execution capability. Partners with UFRGS as a field point for emergency telehealth experiments."
+    image: "images/partner-unisinos.png"
+    section: research
+
+  - name: "PUCRS"
+    full_name: "Pontifícia Universidade Católica do Rio Grande do Sul"
+    description: "Hosts the Simulation and Learning Laboratory for medical education and remote training experiments with immersive technologies (VR/AR). Provides simulated patients and connected sensors for XR health education scenarios."
+    image: "images/partner-pucrs.png"
+    section: research
+
+  - name: "UFCSPA"
+    full_name: "Universidade Federal de Ciências da Saúde de Porto Alegre"
+    description: "The telehealth and emergency telemedicine core. Concentrates development and validation of telehealth and emergency telemedicine applications, including sensors, cameras, and portable medical devices. Serves as the reference hospital receiving clinical information via indoor antennas."
+    image: "images/partner-ufcspa.png"
+    section: research
+
+  - name: "PoP-RS"
+    full_name: "Point of Presence Rio Grande do Sul"
+    description: "Hosts the 5G core of the OpenRAN@Brasil infrastructure, along with the main Open RAN architecture control components including Near-Real-Time and Non-Real-Time RAN Intelligent Controllers (RICs), the Central Unit (CU), and Distributed Units (DUs) serving all partner institutions."
+    image: "images/partner-poprs.png"
+    section: infrastructure
