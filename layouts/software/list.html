@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+{{ partial "hero" . }}
+
+<section class="section-white" style="margin-top: 0;">
+  <h2 class="section-title">Software Projects</h2>
+  <div class="grid-container" style="margin-top: 0;">
+    {{ range site.Data.software.projects }}
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+        <h3 style="margin: 0;">{{ .project_name }}</h3>
+        <span class="status-badge status-{{ .status | lower }}">{{ .status | title }}</span>
+      </div>
+      <p>{{ .description }}</p>
+      <div style="margin-top: 1rem;">
+        <a href="{{ .repository_url }}" target="_blank" rel="noopener" class="cta-primary" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">View Repository &rarr;</a>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}

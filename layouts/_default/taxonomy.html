@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+{{ $tagName := .Title }}
+{{ $title := printf "Tag: %s" $tagName }}
+{{ $desc := printf "Pages tagged with \"%s\"" $tagName }}
+
+{{ partial "hero" (dict "Title" $title "description" $desc) }}
+
+<section class="section-white" style="margin-top: 0;">
+  <h2 class="section-title">Pages tagged "{{ .Title }}"</h2>
+  <div class="grid-container" style="margin-top: 0;">
+    {{ range .Pages }}
+    <div class="card">
+      <h3><a href="{{ .RelPermalink }}" style="color: var(--color-primary-dark);">{{ .Title }}</a></h3>
+      <p>{{ .Summary }}</p>
+      <p style="color: var(--color-text-muted); font-size: 0.82rem; margin-top: 0.5rem;">{{ .Date.Format "January 2, 2006" }}</p>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}

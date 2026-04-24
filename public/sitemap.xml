@@ -2,11 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:1313/tags/funding/</loc>
+    <lastmod>2026-03-15T09:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/</loc>
+    <lastmod>2026-03-15T09:00:00-03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2026-03-15T09:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/news/sample/</loc>
+    <lastmod>2026-03-15T09:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/openran/</loc>
+    <lastmod>2026-03-15T09:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-03-15T09:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/telehealth/</loc>
+    <lastmod>2026-03-15T09:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publications/sample/</loc>
+    <lastmod>2026-02-20T00:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/network-slicing/</loc>
+    <lastmod>2026-02-20T00:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/o-ran/</loc>
+    <lastmod>2026-02-20T00:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publications/</loc>
+    <lastmod>2026-02-20T00:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/partners/</loc>
+  </url><url>
+    <loc>http://localhost:1313/software/</loc>
+  </url><url>
+    <loc>http://localhost:1313/team/</loc>
   </url><url>
     <loc>http://localhost:1313/use-cases/</loc>
   </url>

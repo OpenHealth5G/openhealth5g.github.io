@@ -7,6 +7,8 @@ description: "Emergency Telehealth and Immersive Health Education"
 
 Emergency telehealth leverages ultra-low-latency 5G connectivity to enable real-time remote emergency medical response, connecting first responders in the field with remote medical specialists.
 
+![telehealth](/images/use-case-1-telehealth.png)
+
 ### Scenario
 
 A patient is involved in a traffic accident on a highway. A first-response team equipped with connected devices arrives at the scene. The responder uses a **4K camera** attached to their uniform to transmit ultra-high-definition images of the environment and the victim's clinical condition to specialists at a remote medical center. Simultaneously, a **portable ultrasound** and **vital signs sensors** are connected to a 5G tablet or smartphone, allowing examination images and patient monitoring to be sent in real-time to a reference hospital.
@@ -37,6 +39,8 @@ The ultra-low latency and stable uplink of 5G ensure that video and clinical sig
 ## Use Case 2: Immersive Health Education (XR)
 
 This scenario develops an XR application leveraging the OpenRAN@Brasil experimental environment to integrate clinical simulation with supervised real examination in health training.
+
+![education](/images/use-case-2-xr-education.png)
 
 ### Scenario
 

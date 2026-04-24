@@ -2,8 +2,6 @@ baseURL = 'https://openhealth5g.org/'
 languageCode = 'en-us'
 title = 'OpenHealth5G'
 
-disableKinds = ["taxonomy", "term", "RSS"]
-
 [params]
   description = 'Open 5G Networking for Digital Health'
 
@@ -28,7 +26,29 @@ disableKinds = ["taxonomy", "term", "RSS"]
     name = "Partners"
     pageRef = "/partners"
     weight = 40
+  [[menu.main]]
+    identifier = "team"
+    name = "Team"
+    pageRef = "/team"
+    weight = 45
+  [[menu.main]]
+    identifier = "software"
+    name = "Software"
+    pageRef = "/software"
+    weight = 50
+  [[menu.main]]
+    identifier = "news"
+    name = "News"
+    pageRef = "/news"
+    weight = 60
+  [[menu.main]]
+    identifier = "publications"
+    name = "Publications"
+    pageRef = "/publications"
+    weight = 70
 
 [outputs]
   home = ["HTML"]
-  section = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]

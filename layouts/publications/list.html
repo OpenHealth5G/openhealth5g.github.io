@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+{{ partial "hero" . }}
+
+<section class="section-white" style="margin-top: 0;">
+  <h2 class="section-title">Publications</h2>
+  <div style="max-width: 860px; margin: 0 auto; padding: 0 var(--space-gutter);">
+    {{ range (where (sort site.RegularPages "Date" "desc") "Section" "publications") }}
+    <div style="padding: 1.5rem 0; border-bottom: 1px solid rgba(0,65,130,0.08);">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+        <span style="color: var(--color-primary-light); font-size: 0.78rem; font-weight: 500; background: rgba(0,184,230,0.1); padding: 0.15rem 0.5rem; white-space: nowrap;">{{ .Date.Format "Jan 2006" }}</span>
+        {{ range .Params.tags }}
+        <span class="tag-pill">{{ . }}</span>
+        {{ end }}
+      </div>
+      <h3 style="color: var(--color-primary-dark); font-size: 1.15rem; margin: 0 0 0.4rem; font-family: var(--font-family);">{{ .Title }}</h3>
+      <p style="color: var(--color-text-body); font-size: 0.88rem; margin: 0 0 0.35rem; font-style: italic;">{{ .Params.authors }}</p>
+      <p style="color: var(--color-text-muted); font-size: 0.85rem; margin: 0 0 0.65rem;">{{ .Params.venue }}</p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        {{ if .Params.doi }}
+        <a href="https://doi.org/{{ .Params.doi }}" target="_blank" rel="noopener" style="color: var(--color-primary-dark); font-size: 0.85rem; font-weight: 500; border-bottom: 1px solid rgba(0,184,230,0.4);">DOI</a>
+        {{ end }}
+        {{ if .Params.pdf_link }}
+        <a href="{{ .Params.pdf_link }}" target="_blank" rel="noopener" style="color: var(--color-primary-dark); font-size: 0.85rem; font-weight: 500; border-bottom: 1px solid rgba(0,184,230,0.4);">PDF</a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}

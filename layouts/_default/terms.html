@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+{{ partial "hero" (dict "Title" "Tags" "description" "Browse publications and news by topic") }}
+
+<section class="section-white" style="margin-top: 0;">
+  <div style="max-width: 800px; margin: 0 auto; padding: 0 var(--space-gutter);">
+    <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+      {{ range $term, $terms := site.Taxonomies }}
+        {{ range $terms }}
+        <a href="{{ .Page.RelPermalink }}" style="display: inline-block; padding: 0.5rem 1.25rem; background: var(--color-bg-soft); color: var(--color-primary-dark); font-family: var(--font-family); font-weight: 500; font-size: 0.9rem; border: 1px solid rgba(0,65,130,0.12); border-radius: 2px; text-decoration: none; transition: all 0.2s;">
+          {{ .Page.LinkTitle }}
+          <span style="color: var(--color-text-muted); font-size: 0.82rem; margin-left: 0.25rem;">{{ .Count }}</span>
+        </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

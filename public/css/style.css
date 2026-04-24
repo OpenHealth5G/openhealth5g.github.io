@@ -174,7 +174,7 @@ a:hover { color: var(--color-primary-dark); }
   background-color: var(--color-primary-dark);
   color: var(--color-bg-soft);
   padding: var(--space-section) 0;
-  text-align: center;
+  text-align: justify;
 }
 .section-dark h2 { color: var(--color-primary-light); }
 .section-dark a { color: var(--color-primary-light); }
@@ -304,7 +304,8 @@ a:hover { color: var(--color-primary-dark); }
   align-items: center;
 }
 .footer-partners img {
-  max-height: 36px;
+  max-height: 60px;
+  max-width: 120px;
   opacity: 0.5;
   filter: brightness(0) invert(0.7);
 }
@@ -339,6 +340,7 @@ a:hover { color: var(--color-primary-dark); }
 
 .page-content p {
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
 .page-content table {
@@ -381,4 +383,64 @@ a:hover { color: var(--color-primary-dark); }
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-partners { flex-direction: column; }
   .page-content table { font-size: 0.85rem; }
+}
+
+/* ---- Status badges for software cards ---- */
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.status-active {
+  background: rgba(0,184,230,0.15);
+  color: var(--color-primary-light);
+}
+
+.status-beta {
+  background: rgba(0,65,130,0.12);
+  color: var(--color-primary-dark);
+}
+
+.status-released {
+  background: rgba(0,65,130,0.08);
+  color: var(--color-primary-dark);
+  border: 1px solid rgba(0,65,130,0.2);
+}
+
+.status-research {
+  background: rgba(0,184,230,0.08);
+  color: var(--color-primary-light);
+  border: 1px solid rgba(0,184,230,0.25);
+}
+
+/* ---- News tag pill style ---- */
+.tag-pill {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  font-family: var(--font-family);
+  font-size: 0.72rem;
+  font-weight: 500;
+  background: var(--color-bg-soft);
+  color: var(--color-primary-dark);
+  border: 1px solid rgba(0,65,130,0.15);
+  border-radius: 2px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* ---- Team member photo — circular crop ---- */
+.team-avatar {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid rgba(0,184,230,0.4);
+  flex-shrink: 0;
 }

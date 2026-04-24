@@ -1,11 +1,6 @@
 {{ define "main" }}
-<section class="hero" style="background: var(--color-bg-white);">
-  <div class="hero-inner">
-    <h1 class="hero-title">{{ .Title }}</h1>
-    <p class="hero-subtitle">{{ .Params.description }}</p>
-  </div>
-</section>
-<section class="section-white" style="padding-top: var(--space-section);">
+{{ partial "hero" . }}
+<section class="claimed-section" style="background: var(--color-bg-soft); padding-bottom: var(--space-section);">
   <div class="page-content">
     {{ .Content }}
   </div>

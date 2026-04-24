@@ -45,7 +45,8 @@
     const rect = canvas.parentElement.getBoundingClientRect();
     const w = rect.width;
     const h = rect.height;
-    const density = Math.max(25, Math.min(60, (w * h) / 25000));
+    const density = Math.max(30, Math.min(60, (w * h) / 25000));
+    console.log(`Network canvas: ${w}x${h}, density: ${density}, prefersReduced: ${prefersReduced}`);
     nodes = [];
     for (let i = 0; i < density; i++) {
       nodes.push({
@@ -53,9 +54,9 @@
         y: Math.random() * h,
         vx: (Math.random() - 0.5) * 0.25,
         vy: (Math.random() - 0.5) * 0.25,
-        r: 2 + Math.random() * 3,
+        r: 4 + Math.random() * 3,
         pulse: Math.random() * Math.PI * 2,
-        pulseSpeed: 0.004 + Math.random() * 0.008,
+        pulseSpeed: 0.04 + Math.random() * 0.008,
       });
     }
   }
@@ -65,7 +66,7 @@
     const rect = canvas.parentElement.getBoundingClientRect();
     const w = rect.width;
     const h = rect.height;
-    const maxDist = prefersReduced ? 0 : 130;
+    const maxDist = prefersReduced ? 0 : 250;
 
     ctx.clearRect(0, 0, w, h);
 
@@ -85,7 +86,7 @@
         grad.addColorStop(0, `rgba(0,65,130,${alpha})`);
         grad.addColorStop(1, `rgba(0,184,230,${alpha})`);
         ctx.strokeStyle = grad;
-        ctx.lineWidth = 0.8;
+        ctx.lineWidth = 1.8;
         ctx.beginPath();
         ctx.moveTo(nodes[i].x, nodes[i].y);
         ctx.lineTo(nodes[j].x, nodes[j].y);
