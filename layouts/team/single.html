@@ -1,0 +1,69 @@
+{{ define "main" }}
+<article class="single-page team-member-page">
+  <section class="single-hero member-hero" style="background: var(--color-primary-dark);">
+    <div class="container">
+      <div class="member-hero-inner">
+        <div class="member-photo-wrap">
+          {{ if .Params.photo }}
+          <img src="{{ .Params.photo | relURL }}" alt="{{ .Params.name }}" class="member-photo">
+          {{ else }}
+          <div class="member-photo-placeholder">{{ substr .Params.name 0 1 | upper }}</div>
+          {{ end }}
+        </div>
+        <div class="member-info">
+          <span class="single-section-label">{{ .Params.role }}</span>
+          <h1 class="single-title">{{ .Params.name }}</h1>
+          {{ if .Params.affiliation }}
+          <p class="member-affiliation">{{ .Params.affiliation }}</p>
+          {{ end }}
+          <div class="member-socials">
+            {{ if .Params.orcid }}
+            <a href="{{ .Params.orcid }}" class="member-social-link" target="_blank" rel="noopener" title="ORCID">
+              ORCID
+            </a>
+            {{ end }}
+            {{ if .Params.linkedin }}
+            <a href="{{ .Params.linkedin }}" class="member-social-link" target="_blank" rel="noopener" title="LinkedIn">
+              LinkedIn
+            </a>
+            {{ end }}
+            {{ if .Params.github }}
+            <a href="{{ .Params.github }}" class="member-social-link" target="_blank" rel="noopener" title="GitHub">
+              GitHub
+            </a>
+            {{ end }}
+            {{ if .Params.lattes }}
+            <a href="{{ .Params.lattes }}" class="member-social-link" target="_blank" rel="noopener" title="Lattes">
+              Lattes
+            </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="single-content-section">
+    <div class="container single-content-container">
+      <div class="single-content-body">
+        {{ if .Params.bio }}
+        <div class="member-bio-section">
+          <h2 class="member-section-title">Biography</h2>
+          <p>{{ .Params.bio }}</p>
+        </div>
+        {{ end }}
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+
+  <section class="single-back-section">
+    <div class="container">
+      <a href="team/" class="single-back-link">
+        <span class="single-back-arrow">&#8592;</span>
+        Back to team
+      </a>
+    </div>
+  </section>
+</article>
+{{ end }}

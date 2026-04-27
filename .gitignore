@@ -2,4 +2,11 @@ project-description.md
 project-team.md
 CLAUDE.md
 .claude
+
+# Ignore Hugo's generated site
+/public/
+
+# Ignore Hugo's temporary cache and build resources 
+# (unless you specifically want to cache CSS processing)
+/resources/_gen/
 .hugo_build.lock

@@ -4,9 +4,22 @@
 
 <section class="section-white" style="margin-top: 0;">
   <h2 class="section-title">Publications</h2>
+
+  <!-- Filter bar -->
+  <div class="filter-bar">
+    <div class="filter-group" data-group="year" data-key="year">
+      <span class="filter-label">Year</span>
+      <div class="filter-chips"></div>
+    </div>
+    <div class="filter-group" data-group="tags" data-key="tags">
+      <span class="filter-label">Tags</span>
+      <div class="filter-chips"></div>
+    </div>
+  </div>
+
   <div style="max-width: 860px; margin: 0 auto; padding: 0 var(--space-gutter);">
     {{ range (where (sort site.RegularPages "Date" "desc") "Section" "publications") }}
-    <div style="padding: 1.5rem 0; border-bottom: 1px solid rgba(0,65,130,0.08);">
+    <div class="filter-item" style="padding: 1.5rem 0; border-bottom: 1px solid rgba(0,65,130,0.08);" data-filter-group="publications" data-year="{{ .Date.Format "2006" }}" data-tags="{{ delimit (apply .Params.tags "lower" ".") "," "," }}">
       <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
         <span style="color: var(--color-primary-light); font-size: 0.78rem; font-weight: 500; background: rgba(0,184,230,0.1); padding: 0.15rem 0.5rem; white-space: nowrap;">{{ .Date.Format "Jan 2006" }}</span>
         {{ range .Params.tags }}

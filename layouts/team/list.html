@@ -5,9 +5,22 @@
 <!-- TEAM MEMBERS — dark section with gradient avatar initials -->
 <section class="section-dark" style="margin-top: 0;">
   <h2 class="section-title">Research Team</h2>
+
+  <!-- Filter bar -->
+  <div class="filter-bar">
+    <div class="filter-group" data-group="role" data-key="role">
+      <span class="filter-label">Role</span>
+      <div class="filter-chips"></div>
+    </div>
+    <div class="filter-group" data-group="affiliation" data-key="affiliation">
+      <span class="filter-label">Affiliation</span>
+      <div class="filter-chips"></div>
+    </div>
+  </div>
+
   <div class="grid-container" style="margin-top: 0;">
     {{ range site.Data.team.members }}
-    <div class="card" style="border-left-color: rgba(0,184,230,0.5); background: rgba(255,255,255,0.04); color: var(--color-bg-soft);">
+    <div class="card filter-item" style="border-left-color: rgba(0,184,230,0.5); background: rgba(255,255,255,0.04); color: var(--color-bg-soft);" data-filter-group="team" data-role="{{ lower .role }}" data-affiliation="{{ lower .affiliation }}">
       <!-- Avatar -->
       <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
         {{ if .image }}

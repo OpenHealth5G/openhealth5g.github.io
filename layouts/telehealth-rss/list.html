@@ -1,0 +1,76 @@
+{{ define "main" }}
+<section class="page-section hero-solid" style="background: var(--color-primary-dark); color: #fff;">
+  <div class="container">
+    <div class="page-hero-content">
+      <h1 class="page-hero-title" style="color: #fff;">Telehealth News</h1>
+      <p class="page-hero-subtitle">Latest from the Telehealth RSS Feed</p>
+      <div class="page-hero-meta">
+        <span class="meta-label">FEED SOURCE</span>
+        <span class="meta-value">Telehealth Innovation Tracker</span>
+        <span class="meta-separator">|</span>
+        <span class="meta-label">LAST UPDATE</span>
+        <span class="meta-value">{{ now.Format "January 2, 2006" }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-section page-blueprint-bg">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Latest Updates</h2>
+      <p class="section-subtitle">
+        Curated telehealth industry news, policy changes, and research breakthroughs relevant to the OpenHealth5G ecosystem.
+      </p>
+    </div>
+
+    <div class="rss-feed-container">
+      <div class="rss-feed-header">
+        <span class="rss-status-dot"></span>
+        <span class="rss-status-text">Live feed from Telehealth RSS sources</span>
+        <span class="rss-feed-url">{{ site.Params.rss_feed_url }}</span>
+      </div>
+
+      <div class="rss-feed-grid" id="rss-feed-grid">
+        {{ range site.RegularPages }}
+        {{ if eq .Section "telehealth-rss" }}
+        <article class="rss-item" data-tags="{{ range .Params.tags }}{{ . }} {{ end }}">
+          <div class="rss-item-header">
+            <span class="rss-item-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+            <a href="{{ .Permalink }}" class="rss-item-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </div>
+          <h3 class="rss-item-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
+          <p class="rss-item-summary">{{ .Summary }}</p>
+          <div class="rss-item-meta">
+            {{ range .Params.tags }}
+            <span class="rss-tag">{{ . }}</span>
+            {{ end }}
+          </div>
+        </article>
+        {{ end }}
+        {{ end }}
+
+        {{ if eq (len (where site.RegularPages "Section" "telehealth-rss")) 0 }}
+        <div class="rss-empty">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="1">
+            <path d="M4 11a9 9 0 0 1 9 9"/>
+            <path d="M4 4a16 16 0 0 1 16 16"/>
+            <circle cx="5" cy="19" r="1"/>
+          </svg>
+          <p>RSS feed entries will appear here as they are published.</p>
+          <a href="/news/" class="rss-cta">Browse all news instead</a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

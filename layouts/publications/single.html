@@ -1,0 +1,66 @@
+{{ define "main" }}
+<article class="single-page">
+  <section class="single-hero publication-hero" style="background: var(--color-primary-dark);">
+    <div class="container">
+      <div class="single-hero-inner">
+        <div class="single-meta-line">
+          <span class="single-section-label">PUBLICATION</span>
+          <span class="single-separator">|</span>
+          <time class="single-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        </div>
+        <h1 class="single-title">{{ .Title }}</h1>
+        {{ if .Params.authors }}
+        <p class="single-authors">{{ .Params.authors }}</p>
+        {{ end }}
+        <div class="publication-details">
+          {{ if .Params.venue }}
+          <div class="detail-row">
+            <span class="detail-label">VENUE</span>
+            <span class="detail-value">{{ .Params.venue }}</span>
+          </div>
+          {{ end }}
+          {{ if .Params.pdf_link }}
+          <div class="detail-row">
+            <a href="{{ .Params.pdf_link }}" class="detail-link" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+              </svg>
+              Download PDF
+            </a>
+          </div>
+          {{ end }}
+          {{ if .Params.doi }}
+          <div class="detail-row">
+            <span class="detail-label">DOI</span>
+            <span class="detail-value"><a href="https://doi.org/{{ .Params.doi }}" target="_blank" rel="noopener">{{ .Params.doi }}</a></span>
+          </div>
+          {{ end }}
+        </div>
+        <div class="single-tags">
+          {{ range .Params.tags }}
+          <span class="single-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="single-content-section">
+    <div class="container single-content-container">
+      <div class="single-content-body">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+
+  <section class="single-back-section">
+    <div class="container">
+      <a href="publications/" class="single-back-link">
+        <span class="single-back-arrow">&#8592;</span>
+        Back to all publications
+      </a>
+    </div>
+  </section>
+</article>
+{{ end }}

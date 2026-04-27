@@ -4,9 +4,18 @@
 
 <section class="section-white" style="margin-top: 0;">
   <h2 class="section-title">Software Projects</h2>
+
+  <!-- Filter bar -->
+  <div class="filter-bar">
+    <div class="filter-group" data-group="status" data-key="status">
+      <span class="filter-label">Status</span>
+      <div class="filter-chips"></div>
+    </div>
+  </div>
+
   <div class="grid-container" style="margin-top: 0;">
     {{ range site.Data.software.projects }}
-    <div class="card">
+    <div class="card filter-item" data-filter-group="software" data-status="{{ lower .status }}">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
         <h3 style="margin: 0;">{{ .project_name }}</h3>
         <span class="status-badge status-{{ .status | lower }}">{{ .status | title }}</span>

@@ -1,0 +1,41 @@
+{{ define "main" }}
+<article class="single-page">
+  <section class="single-hero" style="background: var(--color-primary-dark);">
+    <div class="container">
+      <div class="single-hero-inner">
+        <div class="single-meta-line">
+          <span class="single-section-label">{{ .Section | upper }}</span>
+          <span class="single-separator">|</span>
+          <time class="single-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        </div>
+        <h1 class="single-title">{{ .Title }}</h1>
+        {{ if .Params.summary }}
+        <p class="single-summary">{{ .Params.summary }}</p>
+        {{ end }}
+        <div class="single-tags">
+          {{ range .Params.tags }}
+          <span class="single-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="single-content-section">
+    <div class="container single-content-container">
+      <div class="single-content-body">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+
+  <section class="single-back-section">
+    <div class="container">
+      <a href="{{ .Section | relURL }}/" class="single-back-link">
+        <span class="single-back-arrow">&#8592;</span>
+        Back to all {{ .Section }}
+      </a>
+    </div>
+  </section>
+</article>
+{{ end }}
