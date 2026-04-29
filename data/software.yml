@@ -1,40 +1,5 @@
 projects:
-  - project_name: "Open5GC-Orchestrator"
-    description: "Automated deployment and lifecycle management tool for Open5GC 5G core instances with network slice provisioning for health applications."
-    repository_url: "https://github.com/openhealth5g/open5gc-orchestrator"
+  - project_name: "Name"
+    description: "Short description of the project and its purpose within the OpenHealth5G ecosystem."
+    repository_url: "https://github.com/openhealth5g/repo"
     status: "active"
-
-  - project_name: "EdgeHealth-Monitor"
-    description: "Real-time edge computing health monitoring dashboard for telehealth vital signs aggregation, designed for the UFRGS edge nodes."
-    repository_url: "https://github.com/openhealth5g/edgehealth-monitor"
-    status: "active"
-
-  - project_name: "N3IWF-Device-Connect"
-    description: "Python library and CLI for managing N3IWF tunnels that bridge non-3GPP medical devices (BLE/Wi-Fi) into the 5G core network."
-    repository_url: "https://github.com/openhealth5g/n3iwf-device-connect"
-    status: "beta"
-
-  - project_name: "Slice-CAMARA-API"
-    description: "Gateway service exposing GSMA CAMARA Network Exposure APIs for programmatic 5G slice management from health application backends."
-    repository_url: "https://github.com/openhealth5g/slice-camara-api"
-    status: "beta"
-
-  - project_name: "XR-Telemed-Sim"
-    description: "Unity-based virtual reality simulation platform for emergency telehealth training, streaming 4K video and sensor data over 5G network slices."
-    repository_url: "https://github.com/openhealth5g/xr-telemed-sim"
-    status: "active"
-
-  - project_name: "RIC-xApp-Optimizer"
-    description: "Near-Real-Time RIC xApp for dynamic QoS optimization of health application traffic flows using reinforcement learning policies."
-    repository_url: "https://github.com/openhealth5g/ric-xapp-optimizer"
-    status: "research"
-
-  - project_name: "OpenHealth5G-Docs"
-    description: "Centralized documentation site for the OpenHealth5G project, including architecture guides, deployment runbooks, and API references."
-    repository_url: "https://github.com/openhealth5g/docs"
-    status: "released"
-
-  - project_name: "NWDAF-Health-Analyzer"
-    description: "NWDAF analytics module tailored for health traffic patterns, providing predictive load forecasting and anomaly detection for 5G slice health."
-    repository_url: "https://github.com/openhealth5g/nwdaf-health-analyzer"
-    status: "research"
