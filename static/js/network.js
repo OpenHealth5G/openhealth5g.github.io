@@ -137,16 +137,5 @@
   window.addEventListener('resize', resize);
   resize();
 
-  // fade out during scroll for performance, fade back in after idle
-  let scrollTimer;
-  const onScroll = () => {
-    canvas.style.opacity = '0';
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(() => {
-      canvas.style.opacity = prefersReduced ? '0' : '0.35';
-    }, 300);
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-
   raf = requestAnimationFrame(draw);
 })();
