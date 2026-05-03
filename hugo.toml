@@ -22,30 +22,20 @@ title = 'OpenHealth5G'
     pageRef = "/use-cases"
     weight = 30
   [[menu.main]]
-    identifier = "partners"
-    name = "Partners"
-    pageRef = "/partners"
-    weight = 40
-  [[menu.main]]
-    identifier = "team"
-    name = "Team"
-    pageRef = "/team"
-    weight = 45
-  [[menu.main]]
     identifier = "software"
     name = "Software"
     pageRef = "/software"
-    weight = 50
+    weight = 40
   [[menu.main]]
     identifier = "news"
     name = "News"
     pageRef = "/news"
-    weight = 60
+    weight = 50
   [[menu.main]]
     identifier = "publications"
     name = "Publications"
     pageRef = "/publications"
-    weight = 70
+    weight = 60
 
 [outputs]
   home = ["HTML"]

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <script src="/js/network.js" defer></script>
   <script src="/js/filters.js" defer></script>
+  <script src="/js/nav-toggle.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -15,11 +16,7 @@
       <a class="logo" href="/">
         <img src="/images/logo.svg" alt="OpenHealth5G Logo">
       </a>
-      <nav class="site-nav">
-        {{ range site.Menus.main }}
-          <a href="{{ .Page.RelPermalink }}"{{ if eq .Page.Path $.Path }} class="active"{{ end }}>{{ .Name }}</a>
-        {{ end }}
-      </nav>
+      {{ partial "header" . }}
     </div>
   </header>
 

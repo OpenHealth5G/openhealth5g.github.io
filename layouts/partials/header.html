@@ -1,24 +1,27 @@
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="{{ .Site.BaseURL }}" class="brand">
-      <img src="{{ "images/logo.svg" | relURL }}" alt="OpenHealth5G" class="brand-logo">
-    </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
-    </button>
-    <nav class="main-nav" id="main-nav">
-      <ul class="nav-list">
-        {{ range .Site.Menus.main }}
-        <li class="nav-item">
-          <a href="{{ .URL | relURL }}" class="nav-link" data-nav="{{ .Name }}">
-            {{ .Pre }}
-            <span>{{ .Name }}</span>
-          </a>
-        </li>
-        {{ end }}
+<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+  <span class="nav-toggle-bar"></span>
+  <span class="nav-toggle-bar"></span>
+  <span class="nav-toggle-bar"></span>
+</button>
+<nav class="main-nav" id="main-nav">
+  <ul class="nav-list">
+    <li class="nav-item"><a href="/" class="nav-link" data-nav="Home"><span>Home</span></a></li>
+    <li class="nav-item has-dropdown">
+      <button class="nav-link nav-dropdown-trigger" data-parent="about" aria-expanded="false">
+        <span>About</span>
+        <span class="dropdown-arrow" aria-hidden="true"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="/about" class="dropdown-link" data-nav="Overview"><span>Overview</span></a></li>
+        <li><a href="/about/architecture" class="dropdown-link" data-nav="Architecture"><span>Architecture</span></a></li>
+        <li><a href="/about/technologies" class="dropdown-link" data-nav="Technologies"><span>Technologies</span></a></li>
+        <li><a href="/team" class="dropdown-link" data-nav="Team"><span>Team</span></a></li>
+        <li><a href="/partners" class="dropdown-link" data-nav="Partners"><span>Partners</span></a></li>
       </ul>
-    </nav>
-  </div>
-</header>
+    </li>
+    <li class="nav-item"><a href="/use-cases" class="nav-link" data-nav="Use Cases"><span>Use Cases</span></a></li>
+    <li class="nav-item"><a href="/software" class="nav-link" data-nav="Software"><span>Software</span></a></li>
+    <li class="nav-item"><a href="/news" class="nav-link" data-nav="News"><span>News</span></a></li>
+    <li class="nav-item"><a href="/publications" class="nav-link" data-nav="Publications"><span>Publications</span></a></li>
+  </ul>
+</nav>
