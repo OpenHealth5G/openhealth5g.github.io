@@ -19,8 +19,10 @@
   --color-mono: 'Ubuntu Mono', 'Courier New', monospace;
   --color-primary: var(--color-primary-light);
 
-  /* Container */
-  --container-max: clamp(100%, 100vw - 4rem, 1200px);
+  /* Container widths — one shared system (clamp(100%, …) used to defeat the cap) */
+  --container-max: 1200px;   /* grids, header, footer, filters on grid pages */
+  --list-max: 900px;         /* publication / news lists and their filters */
+  --prose-max: 720px;        /* long-form reading text */
 
   /* Logo-gradient (dark → light blue) */
   --gradient-primary: linear-gradient(90deg, #004182, #00B8E6);
@@ -49,8 +51,8 @@
   --space-gap: 1.5rem;
   --space-gutter: clamp(1rem, 4vw, 4rem);
 
-  /* Grid */
-  --grid-max-width: clamp(100%, 100vw - 4rem, 1600px);
+  /* Grid (alias of the container so every section shares one edge) */
+  --grid-max-width: var(--container-max);
 }
 
 /* ---- Reset ---- */
@@ -66,6 +68,10 @@ body {
   background-color: var(--color-bg-soft);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  /* Sticky footer: short pages no longer leave grey space below it */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--color-primary-light); text-decoration: none; transition: color 0.2s; }
@@ -265,7 +271,7 @@ a:hover { color: var(--color-primary-dark); }
 }
 
 /* ---- Main ---- */
-.site-main { position: relative; z-index: 1; }
+.site-main { position: relative; z-index: 1; flex: 1 0 auto; }
 
 /* ---- Hero ---- */
 .hero {
@@ -350,7 +356,6 @@ a:hover { color: var(--color-primary-dark); }
   background-color: var(--color-primary-dark);
   color: var(--color-bg-soft);
   padding: var(--space-section) 0;
-  text-align: justify;
 }
 .section-dark h2 { color: var(--color-primary-light); }
 .section-dark a { color: var(--color-primary-light); }
@@ -384,11 +389,17 @@ a:hover { color: var(--color-primary-dark); }
 }
 
 /* ---- Container (used by single pages) ---- */
-.container {
+.container,
+.wrap {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--space-gutter);
 }
+/* Narrow wrapper for lists (publications, news); gutter stays outside the measure */
+.wrap--narrow { max-width: calc(var(--list-max) + 2 * var(--space-gutter)); }
+/* A grid nested in a wrapper takes the wrapper's width, not its own */
+.wrap > .grid-container,
+.wrap > .card-grid { max-width: none; padding: 0; }
 
 /* ---- Cards — clinical chart aesthetic ---- */
 .card {
@@ -502,7 +513,7 @@ a:hover { color: var(--color-primary-dark); }
 
 /* ---- Page content container ---- */
 .page-content {
-  max-width: 800px;
+  max-width: calc(var(--prose-max) + 2 * var(--space-gutter));
   margin: 0 auto;
   padding: 0 var(--space-gutter);
 }
@@ -523,7 +534,6 @@ a:hover { color: var(--color-primary-dark); }
 
 .page-content p {
   margin-bottom: 1rem;
-  text-align: justify;
 }
 
 .page-content table {
@@ -1201,9 +1211,7 @@ a:hover { color: var(--color-primary-dark); }
 
 /* ---- Client-side filter bar ---- */
 .filter-bar {
-  max-width: 900px;
-  margin: 0 auto 2rem;
-  padding: 0 var(--space-gutter);
+  margin: 0 0 2rem;
 }
 .filter-group {
   margin-bottom: 1rem;
