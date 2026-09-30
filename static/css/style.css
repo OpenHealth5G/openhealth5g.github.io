@@ -332,6 +332,14 @@ a:hover { color: var(--color-primary-dark); }
   margin: 0 0 2.5rem;
 }
 
+/* Inner-page hero: compact, centered on the same axis as grids, lists and prose */
+.hero--page { padding: clamp(2rem, 5vw, 3.5rem) 0; }
+.hero--page .hero-title { margin-bottom: 0.75rem; }
+.hero--page .hero-subtitle {
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
 /* ---- CTA ---- */
 .cta-primary {
   display: inline-block;

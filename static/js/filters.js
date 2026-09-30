@@ -154,9 +154,13 @@
     this.applyFilters();
   };
 
+  /* Values arrive lowercased; these keep their institutional/acronym casing. Add new ones here. */
+  var ACRONYMS = ['ufrgs', 'ufcspa', 'pucrs', 'unisinos', 'utfpr', 'sla', 'ran', 'ai', 'ml', '5g', '6g'];
+
   function formatChipLabel(val, key) {
     if (key === 'year') return val;
     return val.split('-').map(function(w) {
+      if (ACRONYMS.indexOf(w) !== -1) return w.toUpperCase();
       return w.charAt(0).toUpperCase() + w.slice(1);
     }).join(' ');
   }
