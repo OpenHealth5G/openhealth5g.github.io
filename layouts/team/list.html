@@ -2,8 +2,8 @@
 
 {{ partial "hero" . }}
 
-<!-- TEAM MEMBERS — dark section with gradient avatar initials -->
-<section class="section-dark" style="margin-top: 0;">
+<!-- TEAM MEMBERS -->
+<section class="section-soft">
   <div class="wrap">
   <h2 class="section-title">Research Team</h2>
 
@@ -19,39 +19,30 @@
     </div>
   </div>
 
-  <div class="grid-container" style="margin-top: 0;">
+  <div class="card-grid">
     {{ range site.Data.team.members }}
-    <div class="card filter-item" style="border-left-color: rgba(0,184,230,0.5); background: rgba(255,255,255,0.04); color: var(--color-bg-soft);" data-filter-group="team" data-role="{{ lower .role }}" data-affiliation="{{ lower .affiliation }}">
-      <!-- Avatar -->
-      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-        {{ if .image }}
-        <img src="/{{ .image }}" alt="{{ .name }}" class="team-avatar">
-        {{ else }}
-        <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-          <span style="color: white; font-weight: 700; font-size: 1.1rem; font-family: var(--font-family); line-height: 1;">
-            {{- $parts := split .name " " -}}
-            {{- $first := index $parts 0 | replaceRE "^." "" | upper -}}
-            {{- $last := index $parts (add (len $parts) -1) | replaceRE "^." "" | upper -}}
-            {{- $first }}{{ $last -}}
-          </span>
-        </div>
-        {{ end }}
-        <div>
-          <h3 style="color: var(--color-bg-white); font-size: 1.1rem; margin: 0; font-family: var(--font-family);">{{ .name }}</h3>
-          <p style="color: var(--color-primary-light); font-size: 0.82rem; font-weight: 500; margin: 0.15rem 0 0; font-family: var(--font-family);">{{ .role }}</p>
-        </div>
+    <article class="card member-card filter-item" data-filter-group="team" data-role="{{ lower .role }}" data-affiliation="{{ lower .affiliation }}">
+      {{ if .image }}
+      <img src="/{{ .image }}" alt="{{ .name }}" class="team-avatar">
+      {{ else }}
+      <div class="team-avatar team-avatar-initials">
+        {{- $parts := split .name " " -}}
+        {{- $first := index $parts 0 | replaceRE "^." "" | upper -}}
+        {{- $last := index $parts (add (len $parts) -1) | replaceRE "^." "" | upper -}}
+        {{- $first }}{{ $last -}}
       </div>
-      <p style="color: rgba(244,247,249,0.85); font-size: 0.9rem; margin: 0 0 0.75rem;">{{ .bio }}</p>
-      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
-        {{ if .affiliation }}
-        <span style="background: rgba(0,184,230,0.15); color: var(--color-primary-light); padding: 0.2rem 0.6rem; font-size: 0.72rem; font-family: var(--font-family); font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase;">{{ .affiliation }}</span>
-        {{ end }}
-        {{ if .github }}<a href="https://github.com/{{ .github }}" target="_blank" rel="noopener" style="color: rgba(244,247,249,0.7); font-size: 0.82rem; text-decoration: none; border-bottom: 1px dotted rgba(0,184,230,0.5);">GitHub</a>{{ end }}
-        {{ if .orcid }}<a href="https://orcid.org/{{ .orcid }}" target="_blank" rel="noopener" style="color: rgba(244,247,249,0.7); font-size: 0.82rem; text-decoration: none; border-bottom: 1px dotted rgba(0,184,230,0.5);">ORCID</a>{{ end }}
-        {{ if .lattes }}<a href="{{ .lattes }}" target="_blank" rel="noopener" style="color: rgba(244,247,249,0.7); font-size: 0.82rem; text-decoration: none; border-bottom: 1px dotted rgba(0,184,230,0.5);">Lattes</a>{{ end }}
-        {{ if .linkedin }}<a href="https://linkedin.com/in/{{ .linkedin }}" target="_blank" rel="noopener" style="color: rgba(244,247,249,0.7); font-size: 0.82rem; text-decoration: none; border-bottom: 1px dotted rgba(0,184,230,0.5);">LinkedIn</a>{{ end }}
+      {{ end }}
+      <h3 class="member-name">{{ .name }}</h3>
+      <p class="member-role">{{ .role }}</p>
+      <p class="member-bio">{{ .bio }}</p>
+      <div class="card-meta">
+        {{ if .affiliation }}<span class="affiliation-badge">{{ .affiliation }}</span>{{ end }}
+        {{ if .github }}<a class="card-link" href="https://github.com/{{ .github }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+        {{ if .orcid }}<a class="card-link" href="https://orcid.org/{{ .orcid }}" target="_blank" rel="noopener">ORCID</a>{{ end }}
+        {{ if .lattes }}<a class="card-link" href="{{ .lattes }}" target="_blank" rel="noopener">Lattes</a>{{ end }}
+        {{ if .linkedin }}<a class="card-link" href="https://linkedin.com/in/{{ .linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
       </div>
-    </div>
+    </article>
     {{ end }}
   </div>
   </div>

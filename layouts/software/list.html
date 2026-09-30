@@ -2,7 +2,7 @@
 
 {{ partial "hero" . }}
 
-<section class="section-white" style="margin-top: 0;">
+<section class="section-soft">
   <div class="wrap">
   <h2 class="section-title">Software Projects</h2>
 
@@ -14,18 +14,18 @@
     </div>
   </div>
 
-  <div class="grid-container" style="margin-top: 0;">
+  <div class="card-grid">
     {{ range site.Data.software.projects }}
-    <div class="card filter-item" data-filter-group="software" data-status="{{ lower .status }}">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
-        <h3 style="margin: 0;">{{ .project_name }}</h3>
+    <article class="card software-card filter-item" data-filter-group="software" data-status="{{ lower .status }}">
+      <div class="card-head">
+        <h3>{{ .project_name }}</h3>
         <span class="status-badge status-{{ .status | lower }}">{{ .status | title }}</span>
       </div>
       <p>{{ .description }}</p>
-      <div style="margin-top: 1rem;">
-        <a href="{{ .repository_url }}" target="_blank" rel="noopener" class="cta-primary" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">View Repository &rarr;</a>
+      <div class="card-meta">
+        <a href="{{ .repository_url }}" target="_blank" rel="noopener" class="cta-primary cta-small">View Repository &rarr;</a>
       </div>
-    </div>
+    </article>
     {{ end }}
   </div>
   </div>
