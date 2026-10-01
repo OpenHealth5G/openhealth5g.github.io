@@ -6,10 +6,10 @@
       <p class="page-hero-subtitle">Interactive topology of the OpenHealth5G research consortium</p>
       <div class="page-hero-meta">
         <span class="meta-label">PARTNERS</span>
-        <span class="meta-value">{{ len site.Data.partners.partner_data }}</span>
+        <span class="meta-value">{{ len hugo.Data.partners.partner_data }}</span>
         <span class="meta-separator">|</span>
         <span class="meta-label">DOMAINS</span>
-        <span class="meta-value">{{ len site.Data.network_visualization.domains }}</span>
+        <span class="meta-value">{{ len hugo.Data.network_visualization.domains }}</span>
       </div>
     </div>
   </div>
@@ -20,8 +20,8 @@
     <div class="section-header">
       <h2 class="section-title">Network Topology</h2>
       <p class="section-subtitle">
-        The OpenHealth5G consortium unites <strong>{{ len site.Data.partners.partner_data }}</strong> institutions
-        across <strong>{{ len site.Data.network_visualization.domains }}</strong> research domains to advance
+        The OpenHealth5G consortium unites <strong>{{ len hugo.Data.partners.partner_data }}</strong> institutions
+        across <strong>{{ len hugo.Data.network_visualization.domains }}</strong> research domains to advance
         5G-powered healthcare infrastructure.
       </p>
     </div>
@@ -34,7 +34,7 @@
         <h3 class="legend-title">Domain Legend</h3>
         <div class="legend-grid">
           {{ $domain_colors := dict "Academia" "#004182" "Industry" "#00B8E6" "Hospital" "#333333" "Government" "#666666" "Research" "#004182" "NGO" "#00B8E6" }}
-          {{ range $name, $domain := site.Data.network_visualization.domains }}
+          {{ range $name, $domain := hugo.Data.network_visualization.domains }}
           <div class="legend-item">
             <span class="legend-dot" style="background: {{ index $domain_colors $domain }};"></span>
             <span class="legend-text">{{ $name }} ({{ len $domain }})</span>
@@ -52,7 +52,7 @@
       <h2 class="section-title">Research Domains</h2>
     </div>
     <div class="domain-grid">
-      {{ range $name, $domain := site.Data.network_visualization.domains }}
+      {{ range $name, $domain := hugo.Data.network_visualization.domains }}
       <div class="domain-card">
         <div class="domain-card-header">
           <h3 class="domain-card-title">{{ $name }}</h3>

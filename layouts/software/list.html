@@ -13,7 +13,7 @@
   </div>
 
   <div class="card-grid">
-    {{ range site.Data.software.projects }}
+    {{ range hugo.Data.software.projects }}
     <article class="card software-card filter-item" data-filter-group="software" data-status="{{ lower .status }}">
       <div class="card-head">
         <h3>{{ .project_name }}</h3>

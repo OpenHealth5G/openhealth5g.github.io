@@ -1,5 +1,5 @@
-baseURL = 'https://openhealth5g.org/'
-languageCode = 'en-us'
+baseURL = 'https://openhealth5g.github.io/'
+locale = 'en-us'
 title = 'OpenHealth5G'
 
 [params]

@@ -18,7 +18,7 @@
   </div>
 
   <div class="card-grid">
-    {{ range site.Data.team.members }}
+    {{ range hugo.Data.team.members }}
     <article class="card member-card filter-item" data-filter-group="team" data-role="{{ lower .role }}" data-affiliation="{{ lower .affiliation }}">
       {{ if .image }}
       <img src="/{{ .image }}" alt="{{ .name }}" class="team-avatar">
