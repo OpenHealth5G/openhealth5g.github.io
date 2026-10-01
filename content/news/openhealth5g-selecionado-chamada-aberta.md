@@ -4,8 +4,6 @@ date: 2026-04-28
 summary: "The OpenHealth5G project has been approved under the OpenRAN@Brasil Call for 5G Open RAN Applications, and UFRGS has been designated as a host institution for the testbed."
 tags:
   - openran-brasil
-  - call-results
-  - selection
   - testbed
 ---
 
