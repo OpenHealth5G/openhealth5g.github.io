@@ -1,5 +1,5 @@
 projects:
-  - project_name: "Name"
-    description: "Short description of the project and its purpose within the OpenHealth5G ecosystem."
-    repository_url: "https://github.com/openhealth5g/repo"
+  - project_name: "PhotonPath"
+    description: "A closed-loop traffic generator that measures motion-to-photon latency across a mobile network, and splits it into the part the network is responsible for and the part the application is responsible for."
+    repository_url: "https://github.com/openhealth5g/photonpath"
     status: "active"
